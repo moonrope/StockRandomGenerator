@@ -45,13 +45,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    extend ( config, { isDev, isClient, isServer } ) {
-      if ( isServer ) {
-        config.externals = {
-          '@vue-chartjs/line':'commonjs @vue-chartjs/line',
-          '@vue-chartjs/mixins':'commonjs @vue-chartjs/mixins',
-        }
-      }
-    }
   }
 }
