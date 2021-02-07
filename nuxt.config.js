@@ -1,6 +1,7 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  mode: "universal",
+  target: 'server',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'brainstock',
@@ -39,7 +40,6 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
-
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 

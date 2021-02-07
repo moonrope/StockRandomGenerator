@@ -39,7 +39,7 @@ export default {
   },
   async fetch() {
     this.stocks = await fetch(
-      'https://staging-api.brainbase.com/stocks.php'
+      'https://staging-api.brainbase.com/stocks.php',
     ).then(res => res.json()),
       this.generateDays,
       this.generateData
@@ -133,7 +133,7 @@ export default {
       return days;
     },
     restOneDay: function () {
-      console.log("down")
+
       if (this.currentSelectedDay > 0){
         this.currentSelectedDay--
         this.emitEvent()
@@ -147,8 +147,8 @@ export default {
     },
     setDisplayDay: function () {
       let selection = this.currentSelectedDay
-      console.log(selection++)
-      let day = 'Day ' + selection++
+      selection++
+      let day = 'Day ' + selection
       this.displayDay =   day
     },
     emitEvent: function () {
