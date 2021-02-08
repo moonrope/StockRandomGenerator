@@ -8,7 +8,7 @@
       </div>
       <div class="lg:flex-col flex lg:ml-2 lg:text-right text-left items-center space-x-2 lg:space-x-0">
         <div class="text-lg font-bold lg:text-2xl text-md" v-bind:class="[officialPrice.color]">{{ officialPrice.price}} $</div>
-        <div class="text-xs  lg:text-sm" v-bind:class="[officialPrice.color]">{{ officialPrice.priceChange}}</div>
+        <div class="text-xs  lg:text-xs" v-bind:class="[officialPrice.color]">{{ officialPrice.absolutePrice}} ({{ officialPrice.priceChange}})</div>
       </div>
     </div>
     <chart :height="100" :data="chartData" />
@@ -35,7 +35,6 @@ name: "row",
   },
   methods: {
     setValue: function(value) {
-
       this.isSelected = value == 0 ? false : true
       this.selectedDay = this.days[value]
     },
